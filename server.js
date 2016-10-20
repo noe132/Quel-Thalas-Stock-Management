@@ -1,47 +1,24 @@
-const http = require('http');
-const ResourceHandler = require('./ResourceHandler');
-const Model = require('./Model');
+const express = require('express');
 const Router = require('./Router');
-const finalhandler = require('finalhandler')
-
 require('./DateExtension').dateExtension();
 
-var server = http.createServer();
-var router = new Router.Router();
+var app = express();
 
-// pages
-router.get('/', (req, res) => {
-	ResourceHandler.renderEJS(req, res, '/index.ejs');
-});
-router.get('/login', (req, res) => {
-	ResourceHandler.renderEJS(req, res, '/login.ejs');
-});
-router.get('/signup', (req, res) => {
-	ResourceHandler.renderEJS(req, res, '/signup.ejs');
-});
+// use Router
+app.use(Router);
 
-// statics
-router.get('/static', (req, res) => {
-	ResourceHandler.handleStatic(req, res);
+// setting view path
+app.set('views', './www');
+
+// setting view engine
+app.set('view engine', 'ejs');
+
+// error handling
+app.use(function(err, req, res, next) {
+	console.error(err.stack);
+	res.status(500).send('Something broke!');
 });
 
-// interfaces
-router.post('/login', (req, res) => {
-	console.log('post login');
-	Model.login(req, res);
+app.listen(8080, '0.0.0.0', function() {
+	console.log("server is now running on 0.0.0.0:80 \n");
 });
-
-
-server.on('request', (req, res) => {
-
-	router.handle(req, res, finalhandler(req, res));
-
-	// log
-	res.on('finish', (e) => {
-		console.log(`${(new Date()).Format('yyyy-MM-dd hh:mm:ss')} ${req.method} ${res.statusCode} ${req.url}`);
-	});
-});
-
-
-server.listen(8080, "0.0.0.0");
-console.log("server is now running on 0.0.0.0:80 \n");
