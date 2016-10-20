@@ -1,1 +1,1 @@
-# stormwind-stock-management
+# Quel-Thalas-Stock-Management
