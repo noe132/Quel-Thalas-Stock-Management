@@ -1,0 +1,27 @@
+
+.signup{
+	width:500px;
+}
+.signup-row{
+	height:35px;
+}
+
+.signup-row-span{
+	width:60px;
+	line-height:40px;
+	font-weight: bold;
+}
+.signup-row-input{
+	padding:0 6px;
+	height:35px;
+	width: 100%;
+}
+
+.signup-buttonbox{
+	height:40px;
+}
+#info{
+	height:30px;
+	line-height:30px;
+	color:red;
+}

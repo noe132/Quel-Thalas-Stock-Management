@@ -1,0 +1,78 @@
+.qt-textcenter {
+	text-align: center;
+}
+.qt-fl{
+	float:left;
+}
+.qt-fr{
+	float:right;
+}
+.qt-clear::after{
+	content:'';
+	display: table;
+	clear:both;
+}
+.qt-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.qt-mg-top-s {
+	margin-top: 6px;
+}
+.qt-mg-top-m {
+	margin-top: 10px;
+}
+.qt-mg-top-l {
+	margin-top: 15px;
+}
+.qt-mg-right-s {
+	margin-right: 6px;
+}
+.qt-mg-right-m {
+	margin-right: 10px;
+}
+.qt-mg-right-l {
+	margin-right: 15px;
+}
+.qt-mg-bottom-s {
+	margin-bottom: 6px;
+}
+.qt-mg-bottom-m {
+	margin-bottom: 10px;
+}
+.qt-mg-bottom-l {
+	margin-bottom: 15px;
+}
+.qt-mg-left-s {
+	margin-left: 6px;
+}
+.qt-mg-left-m {
+	margin-left: 10px;
+}
+.qt-mg-left-l {
+	margin-left: 15px;
+}
+.qt-btn {
+	display: inline-block;
+	padding: 6px 10px;
+	font-size: 1.6rem;
+	background: #49C;
+	color: white;
+	cursor: pointer;
+	transition: 0.15s;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.qt-btn:hover {
+	color: white;
+	background: #48A3D9;
+}
+.qt-btn:active {
+	color: white;
+	background: #3F8FBF;
+	box-shadow: 0 0 3px #999 inset;
+}
+.qt-btn:focus {
+	color: white;
+}

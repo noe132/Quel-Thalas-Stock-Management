@@ -1,0 +1,28 @@
+
+.login{
+	width:500px;
+}
+.login-row{
+	height:35px;
+}
+
+.login-row-span{
+	width:60px;
+	line-height:40px;
+	font-weight: bold;
+}
+.login-row-input{
+	padding:0 6px;
+	height:35px;
+	width: 100%;
+}
+
+.login-buttonbox{
+	height:40px;
+}
+
+#info{
+	height:30px;
+	line-height:30px;
+	color:red;
+}
