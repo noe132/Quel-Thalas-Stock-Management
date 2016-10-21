@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Quel-Thalas-Stock-Management-System",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express-session": "^1.14.1",
+    "express": "^4.14.0",
+    "finalhandler": "^0.5.0",
+    "md5": "^2.2.1",
+    "mysql": "^2.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noe132/Quel-Thalas-Stock-Management.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "http",
+    "javascript"
+  ],
+  "author": "noe132",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noe132/Quel-Thalas-Stock-Management/issues"
+  },
+  "homepage": "https://github.com/noe132/Quel-Thalas-Stock-Management#readme"
+}
