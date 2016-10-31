@@ -18,8 +18,11 @@ exports.login = function(rs, rj, param) {
 		sql: 'select * from user where username = ? and password = ?',
 		values: [param.username, param.password]
 	}, (err, result, fields) => {
-		console.log(result[0].isvalid)
-		rs(result[0]);
+		if(result.length == 1){
+			rs(result[0]);
+		}else{
+			rj();
+		}
 	});
 }
 
