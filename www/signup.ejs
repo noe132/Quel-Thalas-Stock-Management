@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>注册</title>
+	<title>注册 - 奎尔萨拉斯库存管理系统</title>
 
 	<!-- Set render engine for 360 browser -->
 	<meta name="renderer" content="webkit">
@@ -16,7 +16,7 @@
 
 	<link rel="stylesheet" type="text/css" href="/static/css/signup.css">
 
-	<%- include('style'); %>
+	<%- include('head'); %>
 </head>
 <body>
 	<%- include('header'); %>
@@ -34,28 +34,31 @@
 	</div>
 
 	<div class="signup qt-center qt-mg-bottom-l">
-		<h2 class="qt-textcenter">注册</h2>
-		<hr>
-		<span class="signup-row-span">账户：</span>
-		<div class="signup-row">
-			<input class="signup-row-input" type="text" id="username">
-		</div>
-		<span class="signup-row-span">密码：</span>
-		<div class="signup-row">
-			<input class="signup-row-input" type="password" id="password">
-		</div>
-		<span class="signup-row-span">确认密码：</span>
-		<div class="signup-row qt-mg-bottom-l">
-			<input class="signup-row-input" type="password" id="password">
-		</div>
-		<p id="info" class="qt-mg-top-s qt-mg-bottom-s"></p>
-		<div class="signup-buttonbox">
-			<div id="signup" class="qt-btn">注册</div>
-			<a id="login" href="/login" class="qt-btn qt-fr qt-clear">已有账号？登录</a>
-		</div>
+		<form id="signup-form" action="">
+			<h2 class="qt-textcenter">注册</h2>
+			<hr>
+			<span class="signup-row-span">账户：</span>
+			<div class="signup-row">
+				<input class="signup-row-input" type="text" id="username">
+			</div>
+			<span class="signup-row-span">密码：</span>
+			<div class="signup-row">
+				<input class="signup-row-input" type="password" id="password">
+			</div>
+			<span class="signup-row-span">确认密码：</span>
+			<div class="signup-row">
+				<input class="signup-row-input" type="password" id="password_confirm">
+			</div>
+			<p id="info" class="qt-mg-top-s qt-mg-bottom-s"></p>
+			<div class="signup-buttonbox">
+				<input type="submit" id="signup" class="qt-btn" value="注册">
+				<a id="login" href="/login" class="qt-btn qt-fr qt-clear">已有账号？登录</a>
+			</div>
+		</form>
 	</div>
 
 	<%- include('footer'); %>
-	<%- include('script'); %>
+	<%- include('last'); %>
+	<script src="/static/js/signup.js"></script>
 </body>
 </html>

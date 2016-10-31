@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="/static/css/header.css">
+<header id="topbar">
+	<div class="qt-fl">
+		<a href="/" id="topbar-logo">
+			Quel'Thalas
+		</a>
+	</div>
+	<% if (req.session.logined) { %>
+	<div class="qt-fr">
+		<ul id="topbar-nav" class="qt-nomg">
+			<li><a>你好，<%= req.session.username %></a></li>
+			<li class='nav-menu-li'>
+				<a>货物管理</a>
+				<ul class="nav-menu qt-nomg">
+					<li class="nav-menuitem"><a href="/cargo">货号管理</a></li>
+					<li class="nav-menuitem"><a href="/storage">库存查看</a></li>
+					<li class="nav-menuitem"><a href="/packinglist">出入记录</a></li>
+					<li class="nav-menuitem"><a href="/packinglistimport">货物入库</a></li>
+					<li class="nav-menuitem"><a href=".packinglistexport">货物出库</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href=/useradmin>用户管理</a>
+			</li>
+			<li><a href="/logout">注销</a></li>
+		</ul>
+	</div>
+	<script>
+		$('.nav-menu-li').on('mouseenter',function(e){
+			$(e.currentTarget).find('.nav-menu').fadeIn(150);
+		});
+		$('.nav-menu-li').on('mouseleave',function(e){
+			$(e.currentTarget).find('.nav-menu').delay(100).fadeOut(150);
+		})
+	</script>
+	<% } else { %>
+	<div class="qt-fr">
+		<ul id="topbar-nav" class="qt-nomg">
+			<li><a href="/login">登录</a></li>
+			<li><a href="/signup">注册</a></li>
+		</ul>
+	</div>
+	<% } %>
+</header>

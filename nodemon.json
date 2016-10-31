@@ -1,0 +1,10 @@
+{
+	"verbose": false,
+	"ignore":[
+		"./www",
+		"./static"
+	],
+	"watch": [
+		"./"
+	]
+}

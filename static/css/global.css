@@ -16,6 +16,10 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.qt-nomg{
+	margin:0;
+}
 .qt-mg-top-s {
 	margin-top: 6px;
 }
@@ -54,8 +58,10 @@
 }
 .qt-btn {
 	display: inline-block;
-	padding: 6px 10px;
+	border:none;
+	padding: 10px 12px;
 	font-size: 1.6rem;
+	line-height: 1.6rem;
 	background: #49C;
 	color: white;
 	cursor: pointer;
@@ -75,4 +81,26 @@
 }
 .qt-btn:focus {
 	color: white;
+}
+
+.qt-btn.qt-btn-orange{
+	background: #ED6321;
+}
+.qt-btn.qt-btn-orange:hover {
+	background: #F76722;
+}
+.qt-btn.qt-btn-orange:active {
+	background: #D95B1E;
+	box-shadow: 0 0 3px #999 inset;
+}
+
+.qt-btn.qt-btn-green{
+	background: #47D428;
+}
+.qt-btn.qt-btn-green:hover {
+	background: #4CE02B;
+}
+.qt-btn.qt-btn-green:active {
+	background: #42C425;
+	box-shadow: 0 0 3px #999 inset;
 }

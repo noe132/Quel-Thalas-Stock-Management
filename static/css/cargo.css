@@ -1,0 +1,48 @@
+.add-box{
+	width: 690px;
+	height:36px;
+}
+.cargobox {
+	width: 690px;
+}
+.cargo, .cargo-header {
+	font-size: 0;
+}
+.cargo > div, .cargo-header > div {
+	display: inline-block;
+	font-size: 1.6rem;
+	height: 45px;
+	vertical-align: middle;
+}
+.cargo:hover {
+	background: #EAEAEA;
+}
+.cargo.editing {
+	background: #DDD;
+}
+.cargoid{
+	width: 60px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargoname {
+	width: 350px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargovalue {
+	width: 160px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargooperation {
+	width: 120px;
+	line-height: 45px;
+}
+.cargo.editing [contenteditable] {
+	background: #FAFAFA;
+	border: none;
+	outline: none;
+	box-shadow: 0 0 3px #999;
+	padding:3px 6px;
+}

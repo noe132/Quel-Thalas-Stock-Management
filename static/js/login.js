@@ -1,5 +1,7 @@
+$('#username').focus();
 var loginTimeout;
-$('#login').click(function() {
+$('#login-form').on('submit', function(event) {
+	event.preventDefault();
 	var username = $('#username').val();
 	var password = $('#password').val();
 
@@ -26,6 +28,7 @@ $('#login').click(function() {
 			clearTimeout(loginTimeout);
 			if (data.status === 0) {
 				$('#info').text(data.message);
+				window.location.href = '/';
 			} else {
 				$('#info').text(data.message);
 			}
@@ -35,5 +38,5 @@ $('#login').click(function() {
 			$('#info').text('网络错误！');
 			console.log(err)
 		}
-	})
+	});
 });

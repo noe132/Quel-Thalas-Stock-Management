@@ -11,10 +11,12 @@
     "md5": "^2.2.1",
     "mysql": "^2.11.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
   "scripts": {
     "test": "node server.js",
-    "start": "node server.js"
+    "start": "./node_modules/.bin/nodemon --config nodemon.json"
   },
   "repository": {
     "type": "git",

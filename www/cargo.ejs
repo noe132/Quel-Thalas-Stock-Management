@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>货号管理 - 奎尔萨拉斯库存管理系统</title>
+
+	<!-- Set render engine for 360 browser -->
+	<meta name="renderer" content="webkit">
+
+	<!-- No Baidu Siteapp-->
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/cargo.css">
+
+	<%- include('head'); %>
+</head>
+<body>
+	<%- include('header'); %>
+	<div class="qt-center qt-mg-top-l qt-mg-bottom-l">
+		<h1 class="qt-textcenter">货号管理</h1>
+	</div>
+	<div class="add-box qt-center">
+		<div id="add-new-cargo" class="qt-btn qt-fr">添加</div>
+	</div>
+	<div class="cargobox qt-center qt-mg-top-l">
+		<div class="cargo-header" data-id="">
+			<div class="cargoid">货号</div>
+			<div class="cargoname">货物名称</div>
+			<div class="cargovalue">货物价值</div>
+			<div class="cargooperation">编辑操作</div>
+		</div> 
+	</div>
+
+	<script type="text/template" id="cargotemplate">
+		<div class="cargo">
+			<div class="cargoid">
+				<span class="editable">${cargoid}</span>
+			</div>
+			<div class="cargoname">
+				<span class="editable">${cargoname}</span>
+			</div>
+			<div class="cargovalue">
+				<span class="cargovalue-unit">￥</span>
+				<span class="cargovalue-value editable">${cargovalue}</span>
+			</div>
+			<div class="cargooperation">
+				<div class="qt-btn qt-btn-green cargooperation-edit">编辑</div>
+				<div class="qt-btn qt-btn-orange cargooperation-delete">删除</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="cargonewtemplate">
+		<div class="cargo editing">
+			<div class="cargoid">
+				<span>0</span>
+			</div>
+			<div class="cargoname">
+				<span class="editable" contenteditable="true">货物名称</span>
+			</div>
+			<div class="cargovalue">
+				<span class="cargovalue-unit">￥</span>
+				<span class="cargovalue-value editable" contenteditable="true">0.0</span>
+			</div>
+			<div class="cargooperation">
+				<div class="qt-btn qt-btn-green cargooperation-save-new">保存</div>
+				<div class="qt-btn qt-btn-orange cargooperation-delete-new">删除</div>
+			</div>
+		</div>
+	</script>
+	<%- include('footer'); %>
+	<%- include('last'); %>
+	<script src="/static/js/cargo.js"></script>
+</body>
+</html>
