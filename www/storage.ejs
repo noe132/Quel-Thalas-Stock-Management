@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>库存查看 - 奎尔萨拉斯库存管理系统</title>
+
+	<!-- Set render engine for 360 browser -->
+	<meta name="renderer" content="webkit">
+
+	<!-- No Baidu Siteapp-->
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/storage.css">
+
+	<%- include('head'); %>
+</head>
+<body>
+	<%- include('header'); %>
+	<div class="qt-center qt-mg-top-l qt-mg-bottom-l">
+		<h1 class="qt-textcenter">库存查看</h1>
+	</div>
+	<div class="cargobox qt-center qt-mg-top-l">
+		<div class="cargo-header" data-id="">
+			<div class="cargoid">货号</div>
+			<div class="cargoname">货物名称</div>
+			<div class="cargovalue">货物价值</div>
+			<div class="cargoamount">货物数量</div>
+			<div class="cargototalvalue">货物总价值</div>
+		</div> 
+	</div>
+
+	<script type="text/template" id="cargotemplate">
+		<div class="cargo">
+			<div class="cargoid">
+				<span>${cargoid}</span>
+			</div>
+			<div class="cargoname">
+				<span>${cargoname}</span>
+			</div>
+			<div class="cargovalue">
+				<span class="cargovalue-unit">￥</span>
+				<span class="cargovalue-value">${cargovalue}</span>
+			</div>
+			<div class="cargoamount">
+				<span class="cargovalue-value">${cargoamount}</span>
+			</div>
+			<div class="cargototalvalue">
+				<span class="cargovalue-unit">￥</span>
+				<span class="cargovalue-value">${cargototalvalue}</span>
+			</div>
+		</div>
+	</script>
+
+	<%- include('footer'); %>
+	<%- include('last'); %>
+	<script src="/static/js/storage.js"></script>
+</body>
+</html>

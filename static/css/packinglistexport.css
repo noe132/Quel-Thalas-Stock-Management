@@ -1,0 +1,211 @@
+.packinglistbox {
+	width: 700px;
+	margin-bottom: 120px;
+}
+.packinglist{
+	background: #EAEAEA;
+	position: relative;
+}
+
+.packlinglist-header{
+	height:40px;
+	line-height: 40px;
+	border-bottom: 1px solid #999;
+}
+.packlinglist-header > div{
+	height:40px;
+	line-height: 40px;
+	padding:0 10px;
+}
+.packinglist-row{
+	font-size: 0;
+	border-bottom: 1px solid #999;
+}
+.packinglist-row:hover{
+	background: #DDD;
+}
+.packinglist-row-header{
+	background: #DDD;
+}
+.packinglist-row > div{
+	font-size: 1.6rem;
+	display: inline-block;
+}
+.packinglist-row-new{
+	height:40px;
+	line-height:40px;
+	padding:0 10px;
+	border-bottom: 1px solid #999;
+}
+
+.packinglist-row-new:hover{
+	background: #CCC;
+}
+
+div.cargo-select{
+	font-size: 0;
+	position: relative;
+}
+div.cargo-select:hover{
+	background: #CCC;
+}
+.cargoid{
+	font-size: 1.6rem;
+	display:inline-block;
+	width: 60px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargoname {
+	font-size: 1.6rem;
+	display:inline-block;
+	width: 350px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+
+.cargo-select > .qt-icon {
+	position:absolute;
+	right:10px;
+	font-size: 1.6rem;
+	height: 45px;
+	line-height: 45px;
+}
+
+
+.cargovalue {
+	width: 140px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargoamount {
+	width: 80px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargoamount > span[contenteditable]{
+	height:auto;
+	line-height:24px;
+	padding:3px 6px;
+	background:#FFF;
+	box-shadow: 0 0 3px #999;
+	display:inline-block;
+	outline: none;
+}
+.cargoamount > span.invalid{
+	box-shadow: 0 0 5px 1px red;
+}
+.cargototalvalue {
+	width: 140px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargooperation{
+	visibility: hidden;
+}
+.packinglist-row:hover .cargooperation{
+	visibility: visible;
+}
+.packinglist-remark{
+	border-bottom: 1px solid #999;
+	height: 45px;
+	line-height: 45px;
+	padding:0 10px;
+}
+
+.packinglist-remark > span[contenteditable]{
+	height:auto;
+	line-height:24px;
+	padding:3px 6px;
+	background:#FFF;
+	box-shadow: 0 0 3px #999;
+	display:inline-block;
+}
+
+.packinglist-totalvalue{
+	height: 45px;
+	line-height: 45px;
+	padding:0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.cargo-select-box{
+	position:absolute;
+	top:130px;
+	left: 0;
+	width:570px;
+	border:1px solid gray;
+	background:#EEE;
+	box-shadow: 0 0 9px #999;
+}
+.cargo-select-box-search{
+	height:37px;
+	border-bottom:1px solid #999;
+}
+.cargo-select-box-search > input{
+	height:36px;
+	line-height:36px;
+	width:100%;
+	border:none;
+	padding:0 10px;
+	background:#FEFEFE;
+	outline: none;
+}
+.cargo-select-box-search > input:focus{
+	box-shadow: 0 0 5px #999 inset;
+}
+
+.cargo-select-box-select{
+	height: 180px;
+	overflow: auto;
+	font-size: 0;
+}
+.cargo-select-box-select-header{
+	font-size: 0;
+	background: #CCC;
+}
+.cargo-select-box-row:hover{
+	background: #DDD;
+}
+.cargo-select-box-row-id{
+	display: inline-block;
+	width:70px;
+	font-size: 1.6rem;
+	padding:0 6px;
+	height:36px;
+	line-height: 36px;
+}
+.cargo-select-box-row-name{
+	display: inline-block;
+	width:300px;
+	font-size: 1.6rem;
+	padding:0 6px;
+	height:36px;
+	line-height: 36px;
+}
+.cargo-select-box-row-value{
+	display: inline-block;
+	width:90px;
+	font-size: 1.6rem;
+	padding:0 6px;
+	height:36px;
+	line-height: 36px;
+}
+.cargo-select-box-row-amount{
+	display: inline-block;
+	width:80px;
+	font-size: 1.6rem;
+	padding:0 6px;
+	text-align: center;
+	height:36px;
+	line-height: 36px;
+}

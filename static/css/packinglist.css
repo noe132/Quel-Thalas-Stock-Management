@@ -1,0 +1,71 @@
+.packinglistbox {
+	width: 700px;
+}
+.packinglist{
+
+}
+.packinglist:hover {
+	background: #EAEAEA;
+}
+
+.packlinglist-header{
+	height:40px;
+	line-height: 40px;
+	border-bottom: 1px solid #999;
+}
+.packlinglist-header > div{
+	height:40px;
+	line-height: 40px;
+	padding:0 10px;
+}
+.packinglist-row{
+	font-size: 0;
+	border-bottom: 1px solid #999;
+}
+.packinglist-row:hover{
+	background: #DDD;
+}
+.packinglist:hover .packinglist-row-header{
+	background: #DDD;
+}
+.packinglist-row > div{
+	font-size: 1.6rem;
+	display: inline-block;
+}
+.cargoid{
+	width: 60px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargoname {
+	width: 350px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargovalue {
+	width: 140px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargoamount {
+	width: 80px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+.cargototalvalue {
+	width: 140px;
+	padding: 0 0 0 10px;
+	line-height: 45px;
+}
+
+.packinglist-remark{
+	border-bottom: 1px solid #999;
+	height: 45px;
+	line-height: 45px;
+	padding:0 10px;
+}
+.packinglist-totalvalue{
+	height: 45px;
+	line-height: 45px;
+	padding:0 10px;
+}

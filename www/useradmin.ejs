@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>用户管理 - 奎尔萨拉斯库存管理系统</title>
+
+	<!-- Set render engine for 360 browser -->
+	<meta name="renderer" content="webkit">
+
+	<!-- No Baidu Siteapp-->
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/useradmin.css">
+
+	<%- include('head'); %>
+</head>
+<body>
+	<%- include('header'); %>
+	<div class="qt-center qt-mg-top-l qt-mg-bottom-l">
+		<h1 class="qt-textcenter">用户管理</h1>
+	</div>
+	<div class="userbox qt-center qt-mg-top-l">
+		<div class="user-header" data-id="">
+			<div class="uid">uid</div>
+			<div class="username">用户名</div>
+			<div class="useroperation">操作</div>
+		</div> 
+	</div>
+
+	<script type="text/template" id="usertemplate">
+		<div class="user">
+			<div class="uid">
+				<span>${uid}</span>
+			</div>
+			<div class="username">
+				<span class="editable">${username}</span>
+			</div>
+			<div class="useroperation">
+				<div class="qt-btn qt-btn-green useroperation-edit">重置密码</div>
+				<div class="qt-btn qt-btn-orange useroperation-delete">删除</div>
+			</div>
+		</div>
+	</script>
+
+	<%- include('footer'); %>
+	<%- include('last'); %>
+	<script src="/static/js/useradmin.js"></script>
+</body>
+</html>

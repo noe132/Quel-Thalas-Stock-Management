@@ -158,9 +158,9 @@ exports.addcargo = function(req, res) {
 	req.on('data', (chunk) => {
 		data = Buffer.concat([data, chunk]);
 	});
-	req.on('end', (id) => {
+	req.on('end', () => {
 		var param = querystring.parse(data.toString());
-		Mysql.addcargo(() => {
+		Mysql.addcargo((id) => {
 			res.setHeader('Content-Type', 'application/json; charset=utf-8');
 			res.end(JSON.stringify({
 				status: 0,
@@ -187,9 +187,9 @@ exports.editcargo = function(req, res) {
 	req.on('data', (chunk) => {
 		data = Buffer.concat([data, chunk]);
 	});
-	req.on('end', (id) => {
+	req.on('end', () => {
 		var param = querystring.parse(data.toString());
-		Mysql.editcargo(() => {
+		Mysql.editcargo((id) => {
 			res.setHeader('Content-Type', 'application/json; charset=utf-8');
 			res.end(JSON.stringify({
 				status: 0,
@@ -236,6 +236,20 @@ exports.removecargo = function(req, res) {
 };
 
 
+exports.getstorage = function(req, res) {
+	if (!isLogined(req)) {
+		writeNotLogin(res);
+		return;
+	}
+	Mysql.getstorage((result) => {
+		res.setHeader('Content-Type', 'application/json; charset=utf-8');
+		res.end(JSON.stringify({
+			status: 0,
+			storage: result
+		}));
+	});
+};
+
 exports.getpackinglist = function(req, res) {
 	if (!isLogined(req)) {
 		writeNotLogin(res);
@@ -260,7 +274,8 @@ exports.addpackinglist = function(req, res) {
 		data = Buffer.concat([data, chunk]);
 	});
 	req.on('end', () => {
-		var param = querystring.parse(data.toString());
+		var param = JSON.parse(decodeURIComponent(data.toString()));
+		param.listoperator = req.session.username;
 		Mysql.addpackinglist(() => {
 			res.setHeader('Content-Type', 'application/json; charset=utf-8');
 			res.end(JSON.stringify({

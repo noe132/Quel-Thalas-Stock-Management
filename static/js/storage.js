@@ -1,11 +1,11 @@
 var cargotemplate = $('#cargotemplate').html();
 $.ajax({
 	method: 'POST',
-	url: '/getcargo',
+	url: '/getstorage',
 	timeout: 10000,
 	success: function(data, status, jqXHR) {
 		if (data.status === 0) {
-			for (x of data.cargo) {
+			for (x of data.storage) {
 				$('.cargobox').append($(renderTemplate(x)));
 			}
 		} else {
@@ -22,7 +22,9 @@ function renderTemplate(result) {
 	return [
 		['${cargoid}', result.cargoid],
 		['${cargoname}', result.cargoname],
-		['${cargovalue}', result.cargovalue]
+		['${cargovalue}', result.cargovalue],
+		['${cargoamount}', result.amount],
+		['${cargototalvalue}', Number(result.cargovalue) * Number(result.amount)]
 	].reduce(function(p, c, i, a) {
 		return p.replace(c[0], c[1]);
 	}, cargotemplate);

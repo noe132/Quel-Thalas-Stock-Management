@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>出入库单记录 - 奎尔萨拉斯库存管理系统</title>
+
+	<!-- Set render engine for 360 browser -->
+	<meta name="renderer" content="webkit">
+
+	<!-- No Baidu Siteapp-->
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/packinglist.css">
+
+	<%- include('head'); %>
+</head>
+<body>
+	<%- include('header'); %>
+	<div class="qt-center qt-mg-top-l qt-mg-bottom-l">
+		<h1 class="qt-textcenter">出入库单记录</h1>
+	</div>
+	<div class="packinglistbox qt-center qt-mg-top-l">
+
+	</div>
+
+	<script type="text/template" id="packinglisttemplate">
+		<div class="packinglist qt-mg-bottom-l">
+			<div class="packlinglist-header qt-clear">
+				<div class="qt-fl packlinglist-id">货单号：<span>${packinglistid}</span></div>
+				<div class="qt-fl packlinglist-type">类型：<span>${packinglisttype}</span></div>
+				<div class="qt-fl packlinglist-type">日期：<span>${packinglistdate}</span></div>
+				<div class="qt-fr packlinglist-operator">操作员：<span>${packinglistoperator}</span></div>
+			</div>
+			<div class="packlinglist-content">
+				<div class="packinglist-row packinglist-row-header">
+					<div class="cargoid">
+						<span>货号</span>
+					</div>
+					<div class="cargoname">
+						<span>货物名称</span>
+					</div>
+					<div class="cargovalue">
+						<span>货物价值</span>
+					</div>
+					<div class="cargoamount">
+						<span>数量</span>
+					</div>
+				</div>
+				${packinglistcontent}
+			</div>
+			<div class="packinglist-remark">
+				备注：${packinglistremark}
+			</div>
+			<div class="packinglist-totalvalue">
+				<span class="cargovalue-unit">总金额：￥</span>
+				<span class="cargovalue-value">${packinglisttotalvalue}</span>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="packinglistrowtemplate">
+		<div class="packinglist-row">
+			<div class="cargoid">
+			<span>${cargoid}</span>
+			</div>
+			<div class="cargoname">
+				<span>${cargoname}</span>
+			</div>
+			<div class="cargovalue">
+				<span class="cargovalue-unit">￥</span>
+				<span class="cargovalue-value">${cargovalue}</span>
+			</div>
+			<div class="cargoamount">
+				<span class="cargovalue-value">${cargoamount}</span>
+			</div>
+		</div>
+	</script>
+
+	<%- include('footer'); %>
+	<%- include('last'); %>
+	<script src="/static/js/packinglist.js"></script>
+</body>
+</html>

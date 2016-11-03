@@ -1,45 +1,40 @@
 .add-box{
-	width: 690px;
+	width: 570px;
 	height:36px;
 }
-.cargobox {
-	width: 690px;
+.userbox {
+	width: 570px;
 }
-.cargo, .cargo-header {
+.user, .user-header {
 	font-size: 0;
 }
-.cargo > div, .cargo-header > div {
+.user > div, .user-header > div {
 	display: inline-block;
 	font-size: 1.6rem;
 	height: 45px;
 	vertical-align: middle;
 }
-.cargo:hover {
+.user:hover {
 	background: #EAEAEA;
 }
-.cargo.editing {
+.user.editing {
 	background: #DDD;
 }
-.cargoid{
+.uid{
 	width: 60px;
 	padding: 0 0 0 10px;
 	line-height: 45px;
 }
-.cargoname {
+.username {
 	width: 350px;
 	padding: 0 0 0 10px;
 	line-height: 45px;
 }
-.cargovalue {
+.useroperation {
 	width: 160px;
-	padding: 0 0 0 10px;
 	line-height: 45px;
 }
-.cargooperation {
-	width: 120px;
-	line-height: 45px;
-}
-.cargo.editing [contenteditable] {
+.user.editing [contenteditable] {
 	background: #FAFAFA;
 	border: none;
 	outline: none;

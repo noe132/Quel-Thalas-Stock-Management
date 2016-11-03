@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>出入库单记录 - 奎尔萨拉斯库存管理系统</title>
+
+	<!-- Set render engine for 360 browser -->
+	<meta name="renderer" content="webkit">
+
+	<!-- No Baidu Siteapp-->
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/packinglistimport.css">
+
+	<%- include('head'); %>
+</head>
+<body>
+	<%- include('header'); %>
+	<div class="qt-center qt-mg-top-l qt-mg-bottom-l">
+		<h1 class="qt-textcenter">添加入库单</h1>
+	</div>
+
+
+	<div class="packinglistbox qt-center qt-mg-top-l">
+		<div class="packinglist">
+			<div class="packlinglist-header qt-clear">
+				<div class="qt-fl packlinglist-type">类型：<span>入库单</span></div>
+				<div class="qt-fr packlinglist-operator">操作员：<span><%= req.session.username %></span></div>
+			</div>
+			<div class="packlinglist-content">
+				<div class="packinglist-row packinglist-row-header">
+					<div class="cargoid">
+						<span>货号</span>
+					</div>
+					<div class="cargoname">
+						<span>货物名称</span>
+					</div>
+
+					<div class="cargovalue">
+						<span>货物价值</span>
+					</div>
+					<div class="cargoamount">
+						<span>数量</span>
+					</div>
+				</div>
+				<div class="packinglist-row">
+					<div class="cargo-select">
+						<div class="cargoid">
+							<span>0</span>
+						</div>
+						<div class="cargoname">
+							<span>点击选择货物</span>
+						</div>
+						<div class="qt-icon">&#61655;</div>
+					</div>
+					<div class="cargovalue">
+						<span class="cargovalue-unit">￥</span>
+						<span class="cargovalue-value"></span>
+					</div>
+					<div class="cargoamount">
+						<span contenteditable="true">1</span>
+					</div>
+					<div class="cargooperation">
+						<div class="cargo-delete qt-btn qt-btn-orange">删除</div>
+					</div>
+				</div>
+
+				<div class="packinglist-row-new">
+					<div>添加货物</div>
+				</div>
+				<div>
+			</div>
+			<div class="packinglist-remark">
+				备注：<span contenteditable="true">正常</span>
+			</div>
+			<div class="packinglist-totalvalue">
+				<span class="cargovalue-unit">总金额：￥</span>
+				<span class="cargovalue-value">0</span>
+			</div>
+
+			<div class="cargo-select-box" style="display: none">
+				<div class="cargo-select-box-search">
+					<input type="text" name="" placeholder="输入货号或货品名称搜索">
+				</div>
+				<div class="cargo-select-box-select-header">
+					<div class="cargo-select-box-row-id">货号</div>
+					<div class="cargo-select-box-row-name">货物名称</div>
+					<div class="cargo-select-box-row-value">货物价值</div>
+				</div>
+				<div class="cargo-select-box-select">
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="qt-mg-top-l">
+		<div id="submit" class="qt-btn">保存</div>
+	</div>
+		
+
+
+
+
+	<script type="text/template" id="select-row-template">
+		<div class="cargo-select-box-row">
+			<div class="cargo-select-box-row-id">${cargoid}</div>
+			<div class="cargo-select-box-row-name">${cargoname}</div>
+			<div class="cargo-select-box-row-value">￥${cargovalue}</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="row-template">
+		<div class="packinglist-row">
+			<div class="cargo-select">
+				<div class="cargoid">
+					<span>0</span>
+				</div>
+				<div class="cargoname">
+					<span>点击选择货物</span>
+				</div>
+				<div class="qt-icon">&#61655;</div>
+			</div>
+			<div class="cargovalue">
+				<span class="cargovalue-unit">￥</span>
+				<span class="cargovalue-value"></span>
+			</div>
+			<div class="cargoamount">
+				<span contenteditable="true">1</span>
+			</div>
+			<div class="cargooperation">
+				<div class="cargo-delete qt-btn qt-btn-orange">删除</div>
+			</div>
+		</div>
+	</script>
+	<%- include('footer'); %>
+	<%- include('last'); %>
+	<script src="/static/js/packinglistimport.js"></script>
+</body>
+</html>
